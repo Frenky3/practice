@@ -1,0 +1,170 @@
+:root {
+    --primary-color: #EF1A1A;
+    --world-color: #160600; 
+    --covid-color: #994DB1;
+    --health-color: #0D30C3;
+    --medicine-color: #5B4CCE;
+    --accessories-color: #F40000;
+    --box-color: #EEEEEE;
+    --border-color: #FFFFFF;
+    --line-color: #E0DEDE;
+    --text-color: hsl(0, 0%, 0%);
+}
+
+/* Btn */
+.btn-covid {
+    border: .5px solid var(--line-color);
+    background-color: var(--border-color);
+    height: 30px;
+    line-height: 3rem;
+    width: auto;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn-health {
+    border: .5px solid var(--line-color);
+    background-color: var(--border-color);
+    height: 30px;
+    line-height: 3rem;
+    width: auto;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn-world {
+    border: .5px solid var(--line-color);
+    background-color: var(--border-color);
+    height: 30px;
+    line-height: 3rem;
+    width: auto;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn-medicine {
+    border: .5px solid var(--line-color);
+    background-color: var(--border-color);
+    height: 30px;
+    line-height: 3rem;
+    width: auto;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn-accessories {
+    border: .5px solid var(--line-color);
+    background-color: var(--border-color);
+    height: 30px;
+    line-height: 3rem;
+    width: auto;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.cart-btn {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    display: block;
+    left: 0;
+    width: 140px;
+    height: 42px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.subcribe-btn {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    display: block;
+    left: 0;
+    width: 203px;
+    height: 42px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Btn Hover */
+
+.btn-covid:hover,
+.btn-health:hover,
+.btn-world:hover,
+.btn-medicine:hover,
+.btn-accessories:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Circle Button Color */
+.icon-covid {
+    color: var(--covid-color);
+}
+
+.icon-health {
+    color: var(--health-color);
+}
+
+.icon-world {
+    color: var(--world-color);
+}
+
+.icon-medicine {
+    color: var(--medicine-color);
+}
+
+.icon-accessories {
+    color: var(--accessories-color);
+}
+
+@font-face {
+    font-family: RobotoBold;
+    src: url(/font/Roboto/Roboto-Bold.ttf);
+}
+
+
+/* Heading */
+
+.page__heading {
+    font-size: 2em;
+    margin: 0.67em 0;
+    width: 945px;
+    border-bottom: 3px solid var(--line-color);
+    padding: 20px 0;    
+}
+
+
+.sub__heading {
+    font-size: 2em;
+    margin: 0.67em 0;
+    width: 196px;
+    border-bottom: 1px solid var(--line-color);
+    padding: 20px 0;
+}
+/* html */
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

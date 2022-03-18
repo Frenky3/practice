@@ -1,0 +1,740 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    padding: 0 35px;
+}
+
+.header__search {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header__item {
+    list-style: none;
+    padding: 0;
+    font-size: 1.4rem;
+}
+
+.header__list {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.header__link {
+    text-decoration: none;
+    color: black;
+    margin-left: -15px;
+    margin-right: 15px;
+}
+
+.header__icon {
+    margin-left: 5px;
+}
+
+.header__item--navigation-list,
+.news-cart {
+    margin-left: 35px;
+    margin-right: -15px;
+}
+
+.header__link:hover {
+    color: var(--primary-color);
+}
+
+.header__logo {
+    width: 100%;
+    height: 150px;
+    padding: 50px 35px;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-link {
+    font-family: RobotoBold;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--text-color);
+    margin-left: -35px;
+}
+
+.header__img {
+    width: 388px;
+    height: 47px;
+    margin-left: 30px;
+}
+
+.header__media {
+    list-style: none;
+    display: flex;
+    font-size: 1.8rem;
+    width: 245px;
+    justify-content: end;
+}
+
+.header__media-link,
+.news__link{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.header__media-link:hover,
+.euro__link:hover,
+.covid__link:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.header__media-icon {
+    margin-left: 15px;
+    margin-right: 15px;
+    float: left;
+}
+
+.btn-header__search {
+    margin-left: 40px;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    padding: 15px;
+    background-color: var(--box-color);
+}
+
+.btn-header__search:hover ~ .header__search-box {
+    display: block;
+    animation: fadeIn ease-in .7s;
+}
+
+.header__search-box {
+    background-color: var(--box-color);
+    display: none;
+    position: absolute;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    right: 82px;
+    height: 48px;
+    width: 245px;
+    text-align: left;
+    border: 1px solid var(--box-color);
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.header__menu {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 64px;
+    width: 937px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.header__menu-list {
+    position: relative;
+    display: flex;
+    list-style-type: none;
+    line-height: 32px;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.header__menu-item,
+.media__tagname  {
+    padding-right: 35px;
+}
+
+.menu__medicine::after {
+    content: "";
+    display: none;
+    position: absolute;
+    height: 100px;
+    width: 76px;
+    top: -38px;
+    left: 290px;
+}
+
+.header__menu-link--medicine {
+    position: relative;
+}
+
+.header__menu-link,
+.header__menu-link--medicine {
+    text-decoration: none;
+    color: white;
+}
+
+.header__menu-link:hover,
+.header__menu-link--medicine:hover {
+    opacity: .9;
+}
+
+.header__menu-icon {
+    color: white;
+    font-size: 1.3rem;
+    padding-left: 5px;
+}
+
+.header__menu-decor {
+    padding: 2px 5px;
+    font-weight: 500;
+    font-size: .9rem;
+    background-color: var(--text-color);
+    color: white;
+    border-radius: 20%;
+}
+
+.menu__medicine {
+    z-index: 10;
+    display: none;
+    position: absolute;
+    width: 937px;
+    height: auto;
+    left: -30px;
+    background-color: black;
+    top: 48px;
+    border-radius: 5px;
+}
+
+.menu__medicine-list {
+    display: flex;
+    list-style: none;
+    padding: 20px 25px 25px 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.menu__medicine-heading {
+    margin: 10px 35px;
+    line-height: 6rem;
+    font-size: 2rem;
+    color: white;
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+
+.menu__medicine-effect {
+    width: 0;
+    height: 0;
+    left: 10px;
+    border-top: 30px solid red;
+    border-left: 30px solid transparent;
+}
+
+.menu__medicine-img {
+    position: relative;
+    width: 210px;
+    height: 127.78px;
+    left: 0;
+    float: left;
+    border-radius: 5px;
+}
+
+.menu__medicine-img:hover,
+.menu__medicine-title:hover,
+.vaccine-cart:hover {
+    opacity: .9;
+    cursor: pointer;
+}
+
+.menu__medicine-status {
+    margin-top: 15px;
+    float: left;
+}
+
+.menu__medicine-title {
+    color: white;
+    float: left;
+    text-align: left;
+    font-size: 1.9rem;
+}
+
+.menu__medicine-date {
+    color: white;
+    float: left;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.menu__medicine-date-icon {
+    font-size: 0.8rem;
+    margin: 5px;
+}
+
+.header__menu-item:hover .menu__medicine {
+    display: block;
+    animation: fadeIn ease-in 0.25s;
+}
+
+.up-to-top {
+    right: 0;
+    z-index: 1;
+    font-size: 1.4rem;
+    color: white;
+    margin-right: 35px;
+    position: fixed;
+    padding: 16px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 40px;
+    height: 580px;
+    background-color: var(--box-color);
+}
+
+.content__image {
+    border-radius: 8px;
+}
+
+.content__inside {
+    position: absolute;
+    bottom: 100px;
+    margin-left: 20px;
+    transition: transform linear 0.25s;
+    will-change: transform;
+}
+
+.market__link {
+    transition: transform linear 0.25s;
+    will-change: transform;
+}
+
+.content__inside:hover,
+.market__link:hover  {
+    transform: translateY(-15%)
+}
+
+.content__link,
+.footer__link {
+    text-decoration: none;
+}
+
+.content__inside-title,
+.content__inside-date {
+    text-shadow: 1px 1px black;
+    width: 200px;
+    color: white;
+}
+
+.covid__news {
+    padding: 20px 0;
+}
+
+.covid__heading {
+    font-size: 2em;
+    margin: 0.67em 0;
+    width: 900px;
+    border-bottom: 3px solid var(--line-color);
+    padding: 20px 0;    
+}
+
+.covid__paragraph,
+.news__paragraph {
+    padding: 20px 0;
+    font-size: 1.2rem;
+}
+
+.covid__content,
+.euro__content {
+    padding: 30px 0;
+    display: flex;
+}
+
+.covid__content-btn,
+.euro__content-btn {
+    margin-top: 20px;
+}
+
+.covid__img,
+.euro__img {
+    width: 212px;
+    height: 137px;
+    border-radius: 5px;
+    transition: transform linear 0.25s;
+    will-change: transform;
+}
+
+.covid__img:hover {
+    transform: translateY(-10%);
+}
+
+.covid__content-text {
+    width: 180px;
+}
+
+.covid__content-date,
+.covid__content-date-icon {
+    opacity: .7;
+}
+
+.covid__link,
+.covid__banner-link,
+.euro__link {
+    text-decoration: none;
+    color: black;
+}
+
+.covid__content-text:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+.covid__banner-post {
+    position: relative;
+    height: 445px;
+}
+
+.covid__banner-img {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(10);
+}
+
+.covid__banner-img:hover {
+    cursor: pointer;
+}
+
+.covid__banner-content {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 30%;
+    line-height: 50px;
+}
+
+.covid__banner-content-title {
+    font-size: 3rem;
+}
+
+.covid__banner-content-title,
+.covid__banner-content-date {
+    color: white;
+}
+
+.health__banner {
+    display: flex;
+    flex-direction: row;
+    height: 745px;
+}
+
+.health__img-left {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    width: 445px;
+    height: 255px;
+}
+
+.health__content-left {
+    padding-top: 20px;
+    line-height: 30px;
+}
+
+.health__paragraph {
+    font-size: 1.4rem;
+    opacity: .8;
+}
+
+.health__banner-right {
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.health__img-right {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    width: 220px;
+    height: 150px;
+}
+
+.health-btn,
+.vaccine-btn {
+    margin-top: 20px;
+}
+
+.health__link,
+.vaccine__link {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.health__link:hover,
+.vaccine__link:hover,
+.buy__title:hover {
+    color: var(--primary-color);
+}
+
+.health__img-left:hover,
+.health__img-right:hover {
+    opacity: .8;
+}
+.health__bottom-img {
+    margin: 35px 0;
+    width: 940px;
+    height: 57px;
+}
+
+.buy__category {
+    display: flex;
+    padding: 35px 35px 0 0;
+    height: 450px;
+}
+
+.buy__item {
+    list-style: none;
+    border-radius: 10px;
+    background-color: var(--box-color);
+    width: 212px;
+    height: 212px;
+}
+
+.buy__img {
+    width: 100%;
+    height: 100%;
+}
+
+.buy-cart {
+    font-size: 1.3rem;
+    margin-top: 35px;
+    display: block;
+    left: 0;
+    width: 140px;
+    height: 42px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.buy-cart:hover,
+.vaccine__cart,
+.up-to-top:hover {
+    cursor: pointer;
+    background-color: grey;
+}
+
+.buy__link {
+    text-decoration: none;
+}
+
+.buy-price {
+    font-size: 1.2rem;
+}
+
+.buy-price-new {
+    font-size: 1.6rem;
+}
+
+.vaccine {
+    padding: 35px 0;
+}
+
+.vaccine__content {
+    display: flex;
+    flex-direction: row;
+    padding: 35px 0;
+}
+
+.vaccine__list {
+    list-style: none;
+    margin-left: -5px;
+}
+
+.vaccine__img {
+    width: 293px;
+    height: 190px;
+    border-radius: 5px;
+}
+
+.vaccine-cart {
+    margin: 35px auto;
+}
+
+.bottom-line {
+    margin: 35px;
+    border: .5px solid black;
+}
+
+.news__banner {
+    display: flex;
+    flex-direction: row;
+}
+
+.news__img-left {
+    width: 300px; 
+    height: 321px;
+    border-radius: 10px;
+}
+
+.news_banner,
+.news__content-left {
+    padding-top: 35px;
+}
+
+.news__subcribe {
+    margin-left: 35px;
+    margin-top: 35px;
+    border-radius: 10px;
+    text-align: left;
+    width: 263px;
+    height: 343px;
+    background-color: var(--box-color);
+    padding: 30px;
+}
+
+.news__content-left,
+.news__content-right,
+.media__nav {
+    display: flex;
+}
+
+.news__content {
+    padding: 0 35px;
+}
+
+.subcribe-text {
+    font-size: 2.3rem;
+    padding-bottom: 20px;
+}
+
+.subcribe-box {
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    width: 203px;
+    height: 44px;
+    text-align: center;
+}
+
+.news__img-right {
+    width: 110px;
+    height: 90px;
+    border-radius: 5px;
+}
+
+.news__title-right {
+    width: 120px;
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+}
+
+.news__content-s {
+    padding-left: 20px;
+} 
+
+.news__content-right {
+    padding-bottom: 35px;
+}
+
+.market__post {
+    position: relative;
+}
+
+.market__image {
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 263px;
+    height: 350px;
+    filter: brightness(50%);
+}
+
+.market__inside {
+    bottom: 12%;
+    padding: 25px;
+    position: absolute;
+    font-size: 1rem;
+    display: inline-flex;
+    width: 251px;
+}
+
+.market__link {
+    text-decoration: none;
+    color: white;
+}
+
+.media__item {
+    line-height: 0;
+    list-style: none;
+    width: 263px;
+    height: 44px;
+    background-color: blue;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.media-link {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+}
+
+.footer__text {
+    width: 180px;
+}
+
+.footer__item {
+    padding-top: 35px;
+    padding-right: 35px;
+}
+
+.footer__list { 
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    max-width: 25%;
+}
+
+.footer__subitem-list {
+    padding: 0;
+    line-height: 4rem;
+    list-style: none;
+    max-width: 25%;
+}
+
+.footer__subitem {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 150px;
+    font-size: 1.8rem;
+}
+
+.footer__subcribe {
+    margin-top: 35px;
+    color: var(--text-color);
+    border-radius: 10px;
+    text-align: left;
+    width: 263px;
+    height: 280px;
+    background-color: var(--box-color);
+    padding: 30px;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.copyright__text {
+    padding: 35px 0;
+    width: 100%;
+    text-align: center;
+}

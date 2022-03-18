@@ -1,0 +1,27 @@
+/* Mobile & tablet */
+
+@media (max-width: 1023px) {
+
+    :root {
+        --navbar-height: 0px;
+        --header-height: 100px;
+    }
+    .hide-On-Mobile-Tablet {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media (min-width: 739px) and (max-width: 1023px) {
+    .hide-On-Tablet {
+        display: none;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 739px) {
+    .hide-On-Mobile {
+        display: none;
+    }
+}
